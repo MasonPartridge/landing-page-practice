@@ -10,31 +10,15 @@ body {
     padding: 64px 10vw;
 }
 
+/* header */
+
 .header {
     background-color: #1F2937;
     display: flex;
     justify-content: space-between;
     padding: 0px 10vw;
-}
-
-.intro {
-    background-color: #1F2937;
-}
-
-.intro-image,
-.quote {
-    background-color: #E5E7EB;
-    margin: 8px;
-}
-
-.quote {
-    flex-direction: column;
-}
-
-.intro-image {
-    height: 25vh;
-    width: 50vw;
-    text-align: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .header-links {
@@ -45,32 +29,6 @@ body {
     gap: 16px;
 }
 
-button,
-.advertisement {
-    background-color: #3882F6;
-    color: #E5E7EB;
-    font-weight: bold;
-    align-items: center;
-}
-
-.advertisement {
-    margin: 64px;
-    padding: 32px 10vw;
-    border-radius: 8px;
-}
-
-.advertisement-text {
-    display: flex;
-    flex-direction: column;
-}
-
-button {
-    padding: 8px 12px;
-    border-radius: 8px;
-    flex: none;
-    margin: 16px;
-}
-
 .header-logo {
     font-size: 24px;
     color: #F9FAF8;
@@ -79,21 +37,90 @@ button {
     margin: 8px;
 }
 
-p {
-    margin: 0;
+@media only screen and (max-width: 676px) {
+    .header-links {
+        font-size: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 16px;
+    }
+    
+    .header-logo {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 10vw;
+    }
+
+    .header {
+        padding: 0px 0vw;
+    }
 }
 
-.footer {
-    text-align: center;
+/* introduction */
+
+.intro {
     background-color: #1F2937;
-    color: #E5E7EB;
-    padding: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px
 }
+
+.intro-image {
+    height: 250px;
+    width: 500px;
+    text-align: center;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: #E5E7EB;
+    margin: 8px;
+}
+
+.intro-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-header {
+    font-size: 48px; 
+    font-weight: extra-bold; 
+    color: #F9FAF8;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .intro-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro-image {
+        min-width: 30px;
+        width: 70vw;
+        }
+
+    .intro {
+        padding: 5vw;
+        flex-direction: column;
+        gap: none;
+    }
+
+    .intro-header {
+        text-align: center;
+    }
+}
+
+/* information section */
 
 .information {
     flex-direction: column;
 }
 
+.information-header {
+    font-size: 36px; 
+    font-weight: extra-bold; 
+    color: #1F2937;
+}
 
 .information-image {
     height: 200px;
@@ -106,3 +133,113 @@ p {
 .information-unit {
     width: 200px;
 }
+
+@media only screen and (max-width: 768px) {
+.information-header {
+    text-align: center;
+}
+
+.information-unit {
+    width: 70vw;
+    height: 70vw;
+}
+
+.information-image {
+    width: 70vw;
+    height: 70vw;
+}
+
+.information {
+    padding: 0px 5vw;
+}
+}
+
+/* advertisment */
+
+.advertisement {
+    margin: 64px;
+    padding: 32px 10vw;
+    border-radius: 8px;
+}
+
+.advertisement-button {
+    border-color: #E5E7EB; 
+    border-style: groove;
+}
+
+.advertisement-text {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+    .advertisement {
+        flex-wrap: wrap;
+    }
+
+    .advertisement-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .advertisement-text {
+        text-align: center;
+        font-size: 4vw;
+    }
+}
+
+
+
+.section {
+    padding: 0px 10vw;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 64px 10vw;
+}
+
+
+
+.quote {
+    background-color: #E5E7EB;
+    margin: 8px;
+}
+
+.quote {
+    flex-direction: column;
+}
+
+
+
+button,
+.advertisement {
+    background-color: #3882F6;
+    color: #E5E7EB;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+
+button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    flex: none;
+    margin: 16px;
+}
+
+
+p {
+    margin: 0;
+}
+
+.footer {
+    text-align: center;
+    background-color: #1F2937;
+    color: #E5E7EB;
+    padding: 8px;
+}
+
+
+
+
